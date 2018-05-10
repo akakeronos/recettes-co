@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<meta charset=UTF-8>
+<title>Recettes coopératives</title>
+<link rel=stylesheet href=./style.css>
+<link rel="stylesheet" href="./css/font-awesome/css/font-awesome.min.css">
+
+<script src=./sections.js></script>
+<script src=./main.js></script>
+<script>
+  const filesImport = Files.import()
+  const home = Files.getHome()
+  window.addEventListener('hashchange', Hash.onChange)
+  filesImport.then(json => {
+    Categories.display(Categories.getByFiles(json.body))
+    Articles.display(json.body)
+  })
+</script>
+<header><img src="http://www.benedictelambert.com/img/header2bis.jpg"></header>
+
+<section class=container>
+  <ul class=categories></ul>
+  <div class=fiches></div>
+</section>
+
+<template name=categories>
+    <li data-tpl=element><a href=# data-cat=titre></a></li>
+</template>
+
+<template name=fiches>
+    <article class=resume data-tpl=element>
+      <h2 data-fiche=titre><i class=fa data-fiche=niveau></i></h2>
+      <p data-fiche=description></p>
+      <a href=# data-fiche=plus>En savoir plus ...</a>
+    </article>
+</template>
+
+<template name=fiche>
+  <article class=detailFiche>
+    <h1 class=titleFiche><img src=></h1>
+    <div class=ficheBody data-fiche=content></div>
+    <h2 class=authorFiche><i class="fa fa-creative-commons" data-fiche=licence></i></h2>
+    <span class=dateFiche></span>
+      </article>
+</template>

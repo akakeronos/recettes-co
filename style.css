@@ -1,0 +1,101 @@
+@link url(https://fonts.googleapis.com/css?family=Lato:400,700,400italic);
+@link url(https://fonts.googleapis.com/css?family=Source+Code+Pro:400,700);
+
+
+h1, h2, h3 {
+  font-family: 'Lato';
+  font-weight: 700
+}
+
+body {
+  font-size: 13px;
+  font-family: 'Lato';
+}
+
+section {
+  display: flex;
+}
+
+span {
+  margin: 1em;
+  padding: 1em;
+}
+
+ul.categories,
+div.fiches {
+  display: flex;
+  padding: .5em;
+  list-style: none;
+}
+
+ul.categories {
+  border-top: 1px solid grey;
+  margin: 1em;
+  padding: 0;
+  padding-right: 1em;
+  font-size: 1.5em;
+  flex-direction: column;
+}
+
+ul.categories a {
+  border: 1px solid grey;
+  border-top: none;
+  display: block;
+  padding: .5em;
+  width: 100%;
+  text-decoration: none;
+}
+
+ul.categories a.selected {
+  background: #ccc;
+}
+
+div.fiches {
+  flex-wrap: wrap;
+}
+
+article {
+  border: 0px solid grey;
+  padding: .5em;
+  margin: 1em;
+}
+
+article.detailFiche {
+  width: 90%;
+  margin: .5em;
+  padding: .5em;
+
+}
+article.detailFiche i {
+  margin: .5em;
+  padding: .5em;
+}
+.dateFiche {
+  display: block;
+}
+
+article.resume {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: #ccc;
+}
+article.resume h2 img {
+  float = right;
+  padding-left: 2em;
+}
+
+article h2 {
+  font-size: 1.1em;
+  width: 95%;
+}
+
+article h2 i {
+  float: right;
+  padding-left: 2em;
+}
+
+article p {
+  width: 100%;
+}
