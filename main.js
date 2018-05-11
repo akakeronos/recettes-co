@@ -32,7 +32,7 @@ const Tpl = {
 
 const Files = {
   import: () => {
-    const json = 'https://api.daktary.com/akakeronos/recette-gourmandignes/tree/master/atelier-2017-02-24'
+    const json = 'https://api.daktary.com/akakeronos/recette-gourmandignes/tree/master/fiches'
     //const json = './fiches.json'
     return fetch(json)
       .then(response => response.json())
