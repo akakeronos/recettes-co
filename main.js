@@ -38,7 +38,7 @@ const Files = {
       .then(response => response.json())
   },
   getHome: () => {
-    const json = 'https://api.daktary.com/akakeronos/recette-gourmandignes/blob/master/atelier-2017-02-24/index.md'
+    const json = 'https://api.daktary.com/akakeronos/recette-gourmandignes/blob/master/fiches/index.md'
     return fetch(json)
       .then(response => response.json())
   }
